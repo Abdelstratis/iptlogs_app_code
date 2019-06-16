@@ -1,0 +1,465 @@
+table {
+border: medium solid #74C0C0;
+border-collapse: collapse;
+width: 50%;
+}
+th {
+color: #462066;
+border: thin solid #74C0C0;
+width: 50%;
+padding: 5px;
+background-color: none;
+font-size: 13px;
+}
+td {
+font-family: sans-serif;
+border: thin solid #6495ed;
+
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: #ffffff;
+}
+caption {
+font-family: sans-serif;
+}
+
+section{
+	padding: 5px;
+	margin-top: 7px;
+}
+
+section > table{
+	margin-left: auto;
+	margin-right: auto;
+}
+h1,h2,h3,h4,h5,h6,a{
+	font-family: "Oxygen", sans-serif;
+
+}
+
+button{
+	position: relative;
+	top: 61%;
+	color: white;
+	padding: 5px;
+	background-color: #7FAE2A;
+	border-style: none;
+	cursor: pointer;
+}
+p{
+	font-family: 'oxygen', sans-serif;
+}
+body{
+	font-family: 'oxygen', sans-serif;
+	margin: 0;
+	background-color: #F1F1F1;
+
+}
+
+#searchBar{
+	border : 1px solid #CBC5C5;
+	padding: 12px;
+	background-color: #fff;
+	margin: auto 10px;
+	width: 48%;
+}
+#graphique{
+	/*border : 1px solid #000000;*/
+	padding: 12px;
+	background-color: #fff;
+	margin: auto 10px;
+	border : 1px solid #CBC5C5;
+}
+#allbuttons{
+	/*border : 1px solid #000000;*/
+	padding: 12px;
+	background-color: #fff;
+	/*margin: auto 10px;*/
+	width: 48%;
+	border : 1px solid #CBC5C5;
+}
+.partie b{
+	color: #7FAE2A;
+}
+#searchBar button{
+	box-sizing: border-box;
+	padding: 12px;
+	margin-top: 5px;
+	
+
+}
+#allbut{
+	text-align: right;
+}
+.but{
+	background-color: #7FAE2A;
+	text-decoration: none;
+	border : none;
+	color: white;
+	padding: 5px;
+}
+
+.top{
+	display: inline-flex;
+	margin-bottom: 15px;
+}
+
+#filt{
+	padding: 22px;
+	background-color: #fff;
+	margin: auto 10px;
+	border : 1px solid #CBC5C5;
+	margin-top: 12px;
+}
+.partie{
+	padding: 20px;
+	background-color: #fff;
+	margin: 10px;
+	border : 1px solid #CBC5C5;
+	margin-top: 12px;
+	box-sizing: border-box;
+	text-align: center;
+	margin-bottom: 0;
+	/*width: 25%;*/
+}
+
+input{
+	box-sizing: border-box;
+}
+#filt h6{
+	margin: 0;
+
+}
+#filt img{
+	float: right;
+}
+#filt b{
+	color: #FF851B;
+	font-size: 22px;
+}
+#contenu_all{
+	display: flex;
+	width: 100%;
+	margin-bottom: -20px;
+}
+
+@media screen and (min-width:501px) {
+	#allbuttons button{
+		width: 24%;
+	}
+	.partie .deco{
+		color: #000;
+		background-color: transparent;
+		border: 1px solid #000;
+	}
+
+	#marque{
+		width: 24%;
+	}
+	#brevet{
+		width: 24%;
+	}
+	#modele{
+		width: 24%;
+	}
+	.reini{
+		width: 24%;
+	}
+}
+
+@media screen and (max-width:800px) and (min-width: 500px) {
+	.partie input[type="text"]{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:500px) {
+
+	#brevet, #marque, #modele, .reini{
+		width: 24%;
+	}
+
+	#partieInfos table{
+		width: 100%;
+	}
+
+	#graphique{
+		padding: 0;
+	}
+
+	/*MARQUE*/
+
+	/* Force table to not be like tables anymore */
+	#partieMarque table, thead, tbody, th, td, tr { 
+		display: block; 
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#partieMarque thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	#partieMarque tr { border: 5px solid #ccc; }
+	
+	#partieMarque td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	#partieMarque td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		color: #FF851B;
+	}
+	
+	/*
+	Label the data
+	*/
+	#partieMarque td:nth-of-type(1):before { content: "Marque"; }
+	#partieMarque td:nth-of-type(2):before { content: "Nbr Consultation"; }
+	#partieMarque td:nth-of-type(3):before { content: "Date"; }
+	#partieMarque td:nth-of-type(4):before { content: "Status OK requête"; }
+	#partieMarque td:nth-of-type(5):before { content: "Status Redirection"; }
+	#partieMarque td:nth-of-type(6):before { content: "Status page non trouvé"; }
+	#partieMarque td:nth-of-type(7):before { content: "Status Erreur serveur"; }
+
+	/*BREVET*/
+
+	/* Force table to not be like tables anymore */
+	#partieBrevet table, thead, tbody, th, td, tr { 
+		display: block; 
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#partieBrevet thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	#partieBrevet tr { border: 5px solid #ccc; }
+	
+	#partieBrevet td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	#partieBrevet td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	#partieBrevet td:nth-of-type(1):before { content: "Brevet"; }
+	#partieBrevet td:nth-of-type(2):before { content: "Nbr Consultation"; }
+	#partieBrevet td:nth-of-type(3):before { content: "Date"; }
+	#partieBrevet td:nth-of-type(4):before { content: "Status OK requête"; }
+	#partieBrevet td:nth-of-type(5):before { content: "Status Redirection"; }
+	#partieBrevet td:nth-of-type(6):before { content: "Status page non trouvé"; }
+	#partieBrevet td:nth-of-type(7):before { content: "Status Erreur serveur"; }
+
+
+	/*MODELE*/
+
+	/* Force table to not be like tables anymore */
+	#partieModele table, thead, tbody, th, td, tr { 
+		display: block; 
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#partieModele thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	#partieModele tr { border: 5px solid #ccc; }
+	
+	#partieModele td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	#partieModele td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	#partieModele td:nth-of-type(1):before { content: "Brevet"; }
+	#partieModele td:nth-of-type(2):before { content: "Nbr Consultation"; }
+	#partieModele td:nth-of-type(3):before { content: "Date"; }
+	#partieModele td:nth-of-type(4):before { content: "Status OK requête"; }
+	#partieModele td:nth-of-type(5):before { content: "Status Redirection"; }
+	#partieModele td:nth-of-type(6):before { content: "Status page non trouvé"; }
+	#partieModele td:nth-of-type(7):before { content: "Status Erreur serveur"; }
+
+
+
+	/*INFOS*/
+
+	/* Force table to not be like tables anymore */
+	#partieInfos table, thead, tbody, th, td, tr { 
+		display: block; 
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#partieInfos thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	#partieInfos tr { border: 5px solid #ccc; }
+	
+	#partieInfos td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	#partieInfos td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	#partieInfos td:nth-of-type(1):before { content: "Listes Ip"; }
+	#partieInfos td:nth-of-type(2):before { content: "Date"; }
+	#partieInfos td:nth-of-type(3):before { content: "Heure"; }
+
+	/* Zebra striping */
+	
+	#filt b{
+		margin: 0;
+		font-size: 12px;
+	}
+	#filt{
+		padding: 12px;
+		box-sizing: border-box;
+		height: 100%;
+	}
+	#searchBar p{
+		text-align: center;
+	}
+
+	#searchbar input{
+		text-align: center;
+	}
+
+	#allbuttons{
+		text-align: center;
+	}
+
+	#searchBar input[type="text"]{
+		width: 70%;
+	}
+
+	#contenu_all{
+		display: inherit;
+	}
+	.partie{	
+		width: 100%;
+		margin: 0px;
+		margin-top: 5px;
+		padding: 10px;
+		text-align: center;
+	}
+	.partie h6{
+		text-align: center;
+	}
+	#searchBar{
+		width: initial;
+
+	}
+	#allbuttons{
+		width: initial;
+		margin: auto 10px;
+	}
+	#contenu_all > div:nth-child(4) > a:nth-child(1) > button{
+		background-color: transparent;
+		color: red;
+		border: solid 1px red;
+	}
+
+}
+
+@media screen and (max-width:320px) {
+
+	
+	#searchBar input[type="text"]{
+		width: 65%;
+	}
+	#contenu_all{
+		display: inherit;
+		margin: 0;
+	}
+	.partie{
+		width: 100%;
+	}
+	#searchBar{
+		width: initial;
+
+	}
+	#allbuttons{
+		width: initial;
+		margin: auto 10px;
+		margin-top: 10px;
+	}
+}

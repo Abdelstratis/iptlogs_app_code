@@ -1,0 +1,93 @@
+body{
+    color: white;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+
+
+}
+html{
+    height: 100%;
+}
+p, h1, h2, h3, h4, h5, h6, b{
+    font-family: "oxygen",sans-serif;
+}
+#container{
+    width:400px;
+    margin:auto ;
+    margin-top:5%;
+    vertical-align: middle;
+}
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    background: rgba(64,64,64,0.6);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+}
+#container h1, h3{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #32c5d2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    position: relative;
+    left: 33%;
+}
+.logo {
+
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+.logo a > img{
+    width: 180px;
+    height: 120px;
+    padding: 10px;
+}
+
+.copyright p{
+    color: #000;
+}
+
+@media (max-width: 500px) {
+    .logo {
+    margin-top: 10px; 
+   /* box-sizing: border-box;*/
+
+    }
+
+    #container{
+    margin:auto ;
+    margin-top:8%;
+    vertical-align: middle;
+    /*box-sizing: border-box;*/
+}
+
+
+
+}
